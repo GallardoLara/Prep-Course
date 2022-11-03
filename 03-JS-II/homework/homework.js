@@ -177,7 +177,7 @@ function esPrimo(numero) {
   else if (numero === 2) {
     return true;
   }
-  for (var i = 2; i < numero; i++) {
+  for (let i = 2; i < numero; i++) {
     if (numero % i === 0 ) {
       return false;
     }
@@ -202,7 +202,7 @@ function tablaDelSeis(){
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
   var arraytablaDelSeis = []
-  for (var i = 0; i < 11; i++) {
+  for (let i = 0; i < 11; i++) {
     arraytablaDelSeis.push(6 * i);
   }
   return arraytablaDelSeis
@@ -222,8 +222,15 @@ function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
-  var a = numero
-  
+  var a = numero;
+  var i = 0;
+  do {
+    i = i + 1;
+    a = a + 5;
+  }
+  while(i < 8);
+  return a;
+
 }
 
 
